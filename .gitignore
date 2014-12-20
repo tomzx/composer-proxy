@@ -1,0 +1,4 @@
+.idea/
+vendor/
+public/include/
+public/packages.json

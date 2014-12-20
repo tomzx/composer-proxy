@@ -1,0 +1,14 @@
+<?php
+
+return [
+	'config' => APP_ROOT.'/public.json',
+
+	'homepage' => 'http://composer-proxy',
+	'require-dependencies' => true,
+	'repositories' => [
+		[
+			'type' => 'composer',
+			'url' => 'https://packagist.org',
+		],
+	],
+];
