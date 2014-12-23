@@ -6,8 +6,6 @@ use Composer\Satis\Command\BuildCommand;
 use Composer\Satis\Console\Application;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\NullOutput;
-use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Output\StreamOutput;
 
 class Server
 {
@@ -86,6 +84,9 @@ class Server
 
 	protected function runSatis()
 	{
+		ini_set('memory_limit', '1024M');
+		putenv('COMPOSER_HOME='.APP_ROOT);
+
 		$application = new Application();
 		$application->add(new BuildCommand());
 

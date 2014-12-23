@@ -10,7 +10,7 @@ require_once APP_ROOT.'/vendor/autoload.php';
 
 $klein = new Klein();
 
-$klein->respond('POST', '/packages', function (Request $request){
+$klein->respond('POST', '/packages', function (Request $request) {
 	$server = new Server();
 	return $server->serve($request->paramsPost()->all());
 });
